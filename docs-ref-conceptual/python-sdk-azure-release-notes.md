@@ -3,7 +3,7 @@ title: Notes de publication
 description: Découvrez les nouveautés et surveillez les dernières modifications dans les bibliothèques de gestion Azure pour Python
 keywords: Azure, Python, Kit de développement logiciel (SDK), API
 author: lisawong19
-ms.author: liwong
+ms.author: routlaw
 manager: douge
 ms.date: 06/05/2017
 ms.topic: install
@@ -12,12 +12,12 @@ ms.technology: azure
 ms.devlang: python
 ms.service: multiple
 ms.assetid: ''
-ms.openlocfilehash: b6ab1ec334b116a2ef8e8cb416501ad4e7fc63b9
-ms.sourcegitcommit: f439ba940d5940359c982015db7ccfb82f9dffd9
+ms.openlocfilehash: faef505593e82ffc6676efd6dc8ed83ee3784fae
+ms.sourcegitcommit: 46bebbf5dd558750043ce5afadff2ec3714a54e6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52272925"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67534444"
 ---
 # <a name="release-notes"></a>Notes de publication
 

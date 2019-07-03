@@ -3,7 +3,7 @@ title: Bibliothèques d’autorisation Azure pour Python
 description: Références sur les bibliothèques d’autorisation Azure pour Python
 keywords: Azure, python, Kit de développement logiciel (SDK), API, autorisation
 author: lisawong19
-ms.author: liwong
+ms.author: routlaw
 manager: routlaw
 ms.date: 02/21/2018
 ms.topic: article
@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: ee562614e9745cdc38ae427728df16c117ff80cf
-ms.sourcegitcommit: 434186988284e0a8268a9de11645912a81226d6b
+ms.openlocfilehash: c7c4af34e82f2baad39635ecd20f1b9c48900b41
+ms.sourcegitcommit: 46bebbf5dd558750043ce5afadff2ec3714a54e6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66376715"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67534367"
 ---
 # <a name="azure-authorization-libraries-for-python"></a>Bibliothèques d’autorisation Azure pour Python
 

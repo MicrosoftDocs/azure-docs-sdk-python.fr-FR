@@ -3,18 +3,18 @@ title: Bibliothèques Azure Event Grid pour Python
 description: ''
 keywords: Azure, Python, Kit de développement logiciel (SDK), API, Event Grid
 author: lisawong19
-ms.author: liwong
+ms.author: routlaw
 manager: routlaw
 ms.date: 08/21/2017
 ms.topic: article
 ms.devlang: python
 ms.service: event-grid
-ms.openlocfilehash: bfaa1908295eb77531e399f1337acdeee512005f
-ms.sourcegitcommit: f439ba940d5940359c982015db7ccfb82f9dffd9
+ms.openlocfilehash: e5df1078116f13f959923eac3e0c7b5789545278
+ms.sourcegitcommit: 46bebbf5dd558750043ce5afadff2ec3714a54e6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52276833"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67534299"
 ---
 # <a name="event-grid-libraries-for-python"></a>Bibliothèques Event Grid pour Python
 
@@ -88,7 +88,7 @@ pip install azure-mgmt-eventgrid
 ### <a name="example"></a>Exemples
 
 La commande suivante crée une rubrique personnalisée et abonne un point de terminaison à la rubrique. Le code envoie ensuite un événement à la rubrique via le protocole HTTPS.
-RequestBin est un outil tiers en open-source qui vous permet de créer un point de terminaison et d’afficher les requêtes qui lui sont envoyées. Accédez à [RequestBin](https://requestb.in/), puis cliquez sur **Créer un RequestBin**. Copiez l’URL du fichier bin, dont vous avez besoin pour vous abonner à la rubrique.
+RequestBin est un outil tiers en open-source qui vous permet de créer un point de terminaison et d’afficher les requêtes qui lui sont envoyées. Accédez à [RequestBin](https://requestbin.com), puis cliquez sur **Créer un RequestBin**. Copiez l’URL du fichier bin, dont vous avez besoin pour vous abonner à la rubrique.
 
 ```python
 from azure.mgmt.resource import ResourceManagementClient

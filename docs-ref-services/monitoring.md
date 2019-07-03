@@ -3,7 +3,7 @@ title: Bibliothèques de surveillance Azure pour Python
 description: Référence sur les bibliothèques de surveillance Azure pour Python
 keywords: Azure, Python, Kit de développement logiciel (SDK), API, surveillance
 author: lisawong19
-ms.author: liwong
+ms.author: routlaw
 manager: douge
 ms.date: 07/19/2017
 ms.topic: article
@@ -11,16 +11,16 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: 36746da246db2467b336a2eb14bfe2f6300b6ea4
-ms.sourcegitcommit: 993aacad1d19d87533023f154c015d840723d716
+ms.openlocfilehash: 6408854e48378c27da56185899db5e1cc7f939e5
+ms.sourcegitcommit: 46bebbf5dd558750043ce5afadff2ec3714a54e6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57528057"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67534259"
 ---
 # <a name="azure-monitoring-libraries-for-python"></a>Bibliothèques de surveillance Azure pour Python
 
-## <a name="overview"></a>Vue d’ensemble 
+## <a name="overview"></a>Vue d'ensemble 
 L’analyse fournit des données visant à garantir que votre application reste opérationnelle et soit exécutée en toute intégrité. Elle vous permet également de parer à des problèmes potentiels ou de résoudre des problèmes déjà survenus. En outre, vous pouvez utiliser les données d’analyse pour obtenir des informations détaillées sur votre application. Ces connaissances peuvent vous aider à améliorer les performances de l’application ou sa facilité de gestion, ou à automatiser des actions qui exigeraient normalement une intervention manuelle.
 
 En savoir plus sur Azure Monitor [en cliquant ici](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor). 

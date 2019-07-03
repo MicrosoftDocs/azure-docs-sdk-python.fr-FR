@@ -3,7 +3,7 @@ title: Bibliothèques Azure Scheduler pour Python
 description: Références sur les bibliothèques Azure Scheduler pour Python
 keywords: Azure, Python, Kit de développement logiciel (SDK), API, Scheduler
 author: lisawong19
-ms.author: liwong
+ms.author: routlaw
 manager: mbaldwin
 ms.date: 02/21/2018
 ms.topic: article
@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: 98e32799a4240f9946caf1ab7b05e35605d89dc9
-ms.sourcegitcommit: f439ba940d5940359c982015db7ccfb82f9dffd9
+ms.openlocfilehash: 73c33ff808212fade192ca7c7c05a8e64d3fafda
+ms.sourcegitcommit: 46bebbf5dd558750043ce5afadff2ec3714a54e6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52277059"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67534211"
 ---
 # <a name="azure-scheduler-libraries-for-python"></a>Bibliothèques Azure Scheduler pour Python
 

@@ -2,18 +2,18 @@
 title: Bibliothèques Azure SQL Database pour Python
 description: Connectez-vous à Azure SQL Database à l’aide du pilote ODBC et pyodbc ou gérez des instances Azure SQL avec l’API de gestion.
 author: lisawong19
-ms.author: liwong
+ms.author: routlaw
 manager: routlaw
 ms.date: 01/09/2018
 ms.topic: reference
 ms.devlang: python
 ms.service: sql-database
-ms.openlocfilehash: 5b73977fb58ed3cb17d675784da921b0e199d165
-ms.sourcegitcommit: 560362db0f65307c8b02b7b7ad8642b5c4aa6294
+ms.openlocfilehash: 9b8a5b120425fc600f34c1e4c4456b0888814fe8
+ms.sourcegitcommit: 46bebbf5dd558750043ce5afadff2ec3714a54e6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33901352"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67534202"
 ---
 # <a name="azure-sql-database-libraries-for-python"></a>Bibliothèques Azure SQL Database pour Python
 
@@ -26,7 +26,7 @@ Utilisez les données stockées dans [Azure SQL Database](/azure/sql-database/sq
 ```bash
 pip install pyodbc
 ```
-Pour [en savoir plus](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python#install-the-python-and-database-communication-libraries) sur l’installation des bibliothèques de communication Python et SQL Database.
+Pour [en savoir plus](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python#prerequisites) sur l’installation des bibliothèques de communication Python et SQL Database.
 
 ## <a name="connect-and-execute-a-sql-query"></a>Se connecter et exécuter une requête SQL
 
@@ -60,7 +60,7 @@ while row:
 
 ## <a name="connecting-to-orms"></a>Connexion aux ORM
 
-pyodbc fonctionne avec les autres ORM tel que [SQLAlchemy](http://docs.sqlalchemy.org/en/latest/dialects/mssql.html?highlight=pyodbc#module-sqlalchemy.dialects.mssql.pyodbc) et [Django](https://github.com/lionheart/django-pyodbc/). 
+pyodbc fonctionne avec les autres ORM tel que [SQLAlchemy](https://docs.sqlalchemy.org/en/latest/dialects/mssql.html?highlight=pyodbc#module-sqlalchemy.dialects.mssql.pyodbc) et [Django](https://github.com/lionheart/django-pyodbc/). 
 
 ## <a name="management-apipythonapioverviewazuresqlmanagement"></a>[API de gestion](/python/api/overview/azure/sql/management)
 
