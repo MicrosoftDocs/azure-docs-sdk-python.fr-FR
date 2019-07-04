@@ -3,7 +3,7 @@ title: Installation
 description: Installation du kit de développement logiciel (SDK) Azure pour Python
 keywords: Azure, Python, Kit de développement logiciel (SDK), API
 author: lisawong19
-ms.author: liwong
+ms.author: routlaw
 manager: douge
 ms.date: 06/05/2017
 ms.topic: install
@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: 9fd11cbc7b987b970ceee85c7b11b22e3d6299ea
-ms.sourcegitcommit: 31d7df367b15ec09a5a610eb333295bba0f6b351
+ms.openlocfilehash: 478118642122d7c0c80b1ddf37b13f71d8ca3adc
+ms.sourcegitcommit: 46bebbf5dd558750043ce5afadff2ec3714a54e6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67395450"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67534456"
 ---
 # <a name="installation"></a>Installation
 

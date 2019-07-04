@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: container-instances
-ms.openlocfilehash: 88df9443efb98bc5cec26c5eb4b01a4956141d40
-ms.sourcegitcommit: 1b45953f168cbf36869c24c1741d70153b88b9fc
+ms.openlocfilehash: 19e0e629253462f77d58740857b853d1c94d53cf
+ms.sourcegitcommit: 46bebbf5dd558750043ce5afadff2ec3714a54e6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59675934"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67534324"
 ---
 # <a name="azure-container-instances-libraries-for-python"></a>Bibliothèques Azure Container Instances pour Python
 
@@ -54,7 +54,7 @@ Une des méthodes plus simples pour authentifier les clients Kit de développeme
    export AZURE_AUTH_LOCATION=/home/yourusername/my.azureauth
    ```
 
-Une fois que vous avez créé le fichier d’informations d’identification et la variable d’environnement `AZURE_AUTH_LOCATION`, utilisez la méthode `get_client_from_auth_file` du module [client_factory][client_factory] pour initialiser les objets [ResourceManagementClient][ResourceManagementClient] et [ContainerInstanceManagementClient][ContainerInstanceManagementClient].
+Une fois que vous avez créé le fichier d’informations d’identification et renseigné la variable d’environnement `AZURE_AUTH_LOCATION`, utilisez la méthode `get_client_from_auth_file` des objets [client_factory][client_factory] module to initialize the [ResourceManagementClient][ResourceManagementClient] et [ContainerInstanceManagementClient][ContainerInstanceManagementClient].
 
 <!-- SOURCE REPO: https://github.com/Azure-Samples/aci-docs-sample-python -->
 [!code-python[authenticate](~/aci-docs-sample-python/src/aci_docs_sample.py#L45-L58 "Authenticate ACI and Resource Manager clients")]
@@ -79,9 +79,9 @@ Cet exemple crée un groupe de conteneurs avec deux conteneurs : un conteneur d
 
 Cet exemple crée un groupe de conteneurs à un seul conteneur basé sur des tâches. Cet exemple montre plusieurs fonctionnalités :
 
-* [Command line override](/azure/container-instances/container-instances-restart-policy#command-line-override) : une ligne de commande personnalisée, différente de celle spécifiée dans la ligne `CMD` du fichier Docker du conteneur est spécifiée. Command line override vous permet de spécifier une ligne de commande personnalisée à exécuter au démarrage du conteneur remplaçant la ligne de commande par défaut intégrée dans le conteneur. En ce qui concerne l’exécution de plusieurs commandes au démarrage du conteneur, ce qui suit s’applique :
+* [Command line override](/azure/container-instances/container-instances-start-command) : une ligne de commande personnalisée, différente de celle spécifiée dans la ligne `CMD` du fichier Docker du conteneur est spécifiée. Command line override vous permet de spécifier une ligne de commande personnalisée à exécuter au démarrage du conteneur remplaçant la ligne de commande par défaut intégrée dans le conteneur. En ce qui concerne l’exécution de plusieurs commandes au démarrage du conteneur, ce qui suit s’applique :
 
-   Si vous souhaitez exécuter une **commande unique** avec plusieurs arguments de ligne de commande, par exemple `echo FOO BAR`, vous devez les fournir sous forme de liste de chaînes à la propriété `command` du [Conteneur][Container]. Par exemple : 
+   Si vous souhaitez exécuter une **commande unique** avec plusieurs arguments de ligne de commande, par exemple `echo FOO BAR`, vous devez les fournir sous forme de liste de chaînes à la propriété `command` du [Conteneur][Container]. Par exemple :
 
    `command = ['echo', 'FOO', 'BAR']`
 
@@ -90,7 +90,7 @@ Cet exemple crée un groupe de conteneurs à un seul conteneur basé sur des tâ
    `command = ['/bin/sh', '-c', 'echo FOO BAR && tail -f /dev/null']`
 * [Variables d’environnement](/azure/container-instances/container-instances-environment-variables) : deux variables d’environnement sont spécifiées pour le conteneur du groupe de conteneurs. Utilisez des variables d’environnement pour modifier le comportement du script ou d’une application lors de l’exécution, ou transmettre des informations dynamiques à une application s’exécutant dans le conteneur.
 * [Restart policy](/azure/container-instances/container-instances-restart-policy) : le conteneur est configuré à l’aide d’une stratégie de redémarrage « Never », utile pour les conteneurs basés sur des tâches exécutés dans le cadre d’un programme de traitement par lots.
-* Interrogation des opérations avec [AzureOperationPoller][AzureOperationPoller] : une fois la méthode create appelée, l’opération est interrogée pour déterminer quand elle est terminée et à quel moment les journaux d’activité du groupe de conteneurs peuvent être obtenus.
+* Interrogation des opérations avec [AzureOperationPoller][AzureOperationPoller] : une fois la méthode create appelée, l’opération est interrogée pour déterminer quand elle est terminée et à quel moment les journaux du groupe de conteneurs peuvent être obtenus.
 
 <!-- SOURCE REPO: https://github.com/Azure-Samples/aci-docs-sample-python -->
 [!code-python[create_container_group_task](~/aci-docs-sample-python/src/aci_docs_sample.py#L200-L276 "Run a task-based container")]
@@ -99,7 +99,7 @@ Cet exemple crée un groupe de conteneurs à un seul conteneur basé sur des tâ
 
 Cet exemple répertorie les groupes de conteneurs dans un groupe de ressources, puis imprime certaines de leurs propriétés.
 
-Lorsque vous répertoriez les groupes de conteneurs, l’[instance_view] [ instance_view] de chaque groupe renvoyé est `None`. Pour obtenir les détails des conteneurs d’un groupe de conteneurs, vous devez ensuite [obtenir][containergroupoperations_get] le groupe de conteneurs, qui renvoie le groupe dont la propriété `instance_view` est remplie. Consultez la section [Obtenir un groupe de conteneurs existant](#get-an-existing-container-group) suivant, pour obtenir un exemple d’itération sur les conteneurs d’un groupe de conteneurs dans son `instance_view`.
+Lorsque vous listez les groupes de conteneurs, l’[instance_view][instance_view] de chaque groupe retourné est `None`. Pour obtenir les détails des conteneurs d’un groupe de conteneurs, vous devez ensuite [obtenir][containergroupoperations_get] le groupe de conteneurs, qui retourne le groupe avec sa propriété `instance_view` renseignée. Consultez la section [Obtenir un groupe de conteneurs existant](#get-an-existing-container-group) suivant, pour obtenir un exemple d’itération sur les conteneurs d’un groupe de conteneurs dans son `instance_view`.
 
 <!-- SOURCE REPO: https://github.com/Azure-Samples/aci-docs-sample-python -->
 [!code-python[list_container_groups](~/aci-docs-sample-python/src/aci_docs_sample.py#L279-L293 "List container groups")]
@@ -108,7 +108,7 @@ Lorsque vous répertoriez les groupes de conteneurs, l’[instance_view] [ insta
 
 Cet exemple obtient un groupe de conteneurs spécifique à partir d’un groupe de ressources, puis imprime certaines de ses propriétés (y compris ses conteneurs) et ses valeurs.
 
-L’[opération d’obtention] [ containergroupoperations_get] renvoie un groupe de conteneurs dont l’[instance_view][instance_view] est rempli, ce qui vous permet d’itérer sur chaque conteneur du groupe. Seule l’opération `get` remplit la propriété `instance_vew` du groupe de conteneurs. Le fait de répertorier les groupes de conteneurs dans un abonnement ou un groupe de ressources n’a pas pour effet d’alimenter la vue d’instance en raison de la nature potentiellement onéreuse de l’opération (par exemple, lorsque vous répertoriez des centaines de groupes de conteneurs contenant potentiellement plusieurs conteneurs). Comme mentionné précédemment dans la section [Répertorier des groupes de conteneurs](#list-container-groups), après un `list`, vous devez `get` un groupe de conteneurs spécifique pour obtenir les détails relatifs à l’instance de conteneur s’y rapportant.
+L’[opération get][containergroupoperations_get] returns a container group with its [instance_view][instance_view] est renseignée, ce qui vous permet d’itérer sur chaque conteneur du groupe. Seule l’opération `get` remplit la propriété `instance_vew` du groupe de conteneurs. Le fait de répertorier les groupes de conteneurs dans un abonnement ou un groupe de ressources n’a pas pour effet d’alimenter la vue d’instance en raison de la nature potentiellement onéreuse de l’opération (par exemple, lorsque vous répertoriez des centaines de groupes de conteneurs contenant potentiellement plusieurs conteneurs). Comme mentionné précédemment dans la section [Répertorier des groupes de conteneurs](#list-container-groups), après un `list`, vous devez `get` un groupe de conteneurs spécifique pour obtenir les détails relatifs à l’instance de conteneur s’y rapportant.
 
 <!-- SOURCE REPO: https://github.com/Azure-Samples/aci-docs-sample-python -->
 [!code-python[get_container_group](~/aci-docs-sample-python/src/aci_docs_sample.py#L296-L325 "Get container group")]
@@ -145,7 +145,7 @@ Cet exemple supprime plusieurs groupes de conteneurs à partir d’un groupe de 
 [client_factory]: /python/api/azure.common.client_factory
 [Container]: /python/api/azure.mgmt.containerinstance.models.container
 [ContainerGroupInstanceView]: /python/api/azure.mgmt.containerinstance.models.containergrouppropertiesinstanceview
-[containergroupoperations_get]: /python/api/azure.mgmt.containerinstance.operations.containergroupsoperations#get
+[containergroupoperations_get]: /python/api/azure.mgmt.containerinstance.operations.containergroupsoperations#get-resource-group-name--container-group-name--custom-headers-none--raw-false----operation-config-
 [ContainerInstanceManagementClient]: /python/api/azure.mgmt.containerinstance.containerinstancemanagementclient
 [instance_view]: /python/api/azure.mgmt.containerinstance.models.containergroup#variables
 [ResourceManagementClient]: /python/api/azure.mgmt.resource.resources.resourcemanagementclient

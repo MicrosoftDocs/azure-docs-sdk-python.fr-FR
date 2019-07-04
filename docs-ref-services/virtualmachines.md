@@ -3,7 +3,7 @@ title: Bibliothèques de machines virtuelles Azure pour Python
 description: ''
 keywords: Azure, Python, Kit de développement logiciel (SDK), API, Calcul, Machines virtuelles
 author: lisawong19
-ms.author: liwong
+ms.author: routlaw
 manager: douge
 ms.date: 06/09/2017
 ms.topic: article
@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: compute
-ms.openlocfilehash: 78750d5f98ab81401c48493aff98d4268c01850d
-ms.sourcegitcommit: 434186988284e0a8268a9de11645912a81226d6b
+ms.openlocfilehash: e09ffed98f3f6050e34ca2cb39e645e30f8bdb15
+ms.sourcegitcommit: 46bebbf5dd558750043ce5afadff2ec3714a54e6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66376701"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67534186"
 ---
 # <a name="azure-virtual-machine-libraries"></a>Bibliothèques de machines virtuelle Azure
 
@@ -76,12 +76,12 @@ def create_vm()
 
 ## <a name="samples"></a>Exemples
 
-* [Gérer des machines virtuelles][1]
+* [Gestion des machines virtuelles][1]
 * [Authentifier avec Managed Service Identity][2]
 * [Créer une machine virtuelle avec l’extension Managed Service Identity][3]
 * [Gérer un équilibreur de charge][4]
 * [Créer et configurer des disques managés][5]
-* [Répertorier des images][6] 
+* [Lister des images][6] 
 * [Surveiller les machines virtuelles][7]
 
 Afficher la [liste complète](https://azure.microsoft.com/resources/samples/?platform=python&term=virtual-machines) des exemples de machines virtuelles.

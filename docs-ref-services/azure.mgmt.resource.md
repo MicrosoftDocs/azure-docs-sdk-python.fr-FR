@@ -3,7 +3,7 @@ title: Bibliothèques de ressources Azure pour Python
 description: ''
 keywords: Azure, Python, Kit de développement logiciel (SDK), API, ressources
 author: lisawong19
-ms.author: liwong
+ms.author: routlaw
 manager: douge
 ms.date: 06/19/2017
 ms.topic: article
@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: resources
-ms.openlocfilehash: 32e13bee27db091f0bca12c7d9ae4fc62165f4c0
-ms.sourcegitcommit: 3617d0db0111bbc00072ff8161de2d76606ce0ea
+ms.openlocfilehash: d708a5e7296b166b6e55b9b7b0d995e72e264267
+ms.sourcegitcommit: 46bebbf5dd558750043ce5afadff2ec3714a54e6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2017
-ms.locfileid: "20909392"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67534379"
 ---
 # <a name="azure-resources-libraries-for-python"></a>Bibliothèques de ressources Azure pour Python 
 
@@ -46,7 +46,7 @@ Gérez des ressources Azure dans des groupes de ressources.
 pip install azure-mgmt-resource
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example"></a>Exemples
 L’exemple suivant montre comment créer un groupe de ressources. 
 
 ```python

@@ -3,19 +3,19 @@ title: Bibliothèques Azure MySQL/PostgreSQL pour Python
 description: ''
 keywords: Azure, Python, Kit de développement logiciel (SDK), API, SQL, base de données, MySQL, PostgreSQL
 author: lisawong19
-ms.author: liwong
+ms.author: routlaw
 manager: douge
 ms.date: 07/19/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: python
-ms.openlocfilehash: 402e87ae81e6df64b040293992244902313e5b1b
-ms.sourcegitcommit: fba77bdf8eb9f49621be94544d9fef88aff98c14
+ms.openlocfilehash: 81a29ea16dc9857257859181f0c2e5be8b4b7901
+ms.sourcegitcommit: 46bebbf5dd558750043ce5afadff2ec3714a54e6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54747719"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67534236"
 ---
 # <a name="azure-mysqlpostgresql-libraries-for-python"></a>Bibliothèques Azure MySQL/PostgreSQL pour Python
 
@@ -25,7 +25,7 @@ Utilisez des ressources et des données stockées dans la [base de données Azur
 
 ### <a name="client-odbc-driver-and-pyodbc"></a>Pilote ODBC du client et pyodbc
 
-Nous recommandons le [pilote ODBC](/azure/sql-database/sql-database-connect-query-python#install-the-python-and-database-communication-libraries) Microsoft comme bibliothèque client pour accéder à la base de données Azure pour MySQL. Utilisez le pilote ODBC pour vous connecter à la base de données et exécuter les instructions SQL directement.
+Nous recommandons le [pilote ODBC](/azure/sql-database/sql-database-connect-query-python#prerequisites) Microsoft comme bibliothèque client pour accéder à la base de données Azure pour MySQL. Utilisez le pilote ODBC pour vous connecter à la base de données et exécuter les instructions SQL directement.
 
 #### <a name="example"></a>Exemples
 
@@ -113,7 +113,7 @@ Utilisez le pilote ODBC et pyodbc pour vous connecter à la base de données et 
 En savoir plus sur les [bases de données Azure pour PostgreSQL](https://docs.microsoft.com/azure/postgresql/).
 
 ### <a name="client-odbc-driver-and-pyodbc"></a>Pilote ODBC du client et pyodbc
-Nous recommandons [pyodbc et le pilote ODBC](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python#install-the-python-and-database-communication-libraries) Microsoft comme bibliothèque client pour accéder à la base de données Azure pour PostgreSQL
+Nous recommandons [pyodbc et le pilote ODBC](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python#prerequisites) Microsoft comme bibliothèque cliente pour accéder à Azure Database pour PostgreSQL.
 
 #### <a name="example"></a>Exemples 
 

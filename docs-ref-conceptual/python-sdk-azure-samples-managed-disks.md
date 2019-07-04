@@ -9,13 +9,13 @@ ms.topic: article
 ms.service: Azure
 ms.technology: Azure
 ms.date: 6/15/2017
-ms.author: liwong
-ms.openlocfilehash: bee17efdb90d6365acb2adbf9c01d1f7e843da42
-ms.sourcegitcommit: 434186988284e0a8268a9de11645912a81226d6b
+ms.author: routlaw
+ms.openlocfilehash: 8618b42a545e2e36ccca8944ef1dc6cf49966b00
+ms.sourcegitcommit: 46bebbf5dd558750043ce5afadff2ec3714a54e6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66376861"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67534416"
 ---
 # <a name="managed-disks"></a>Disques managés
 
@@ -65,6 +65,29 @@ async_creation = compute_client.disks.create_or_update(
 disk_resource = async_creation.result()
 ```
 
+### <a name="create-an-image-from-blob-storage"></a>Créer une image à partir du stockage Blob
+
+```python
+from azure.mgmt.compute.models import DiskCreateOption
+
+async_creation = compute_client.images.create_or_update(
+    'my_resource_group',
+    'my_image_name',
+    {
+        'location': 'eastus',
+        'storage_profile': {
+           'os_disk': {
+              'os_type': 'Linux',
+              'os_state': "Generalized",
+              'blob_uri': 'https://bg09.blob.core.windows.net/vm-images/non-existent.vhd',
+              'caching': "ReadWrite",
+           }
+        }        
+    }
+)
+image_resource = async_creation.result()
+```
+
 ### <a name="create-a-managed-disk-from-your-own-image"></a>Créer un disque managé à partir de votre propre image
 
 ```python
@@ -105,6 +128,18 @@ storage_profile = azure.mgmt.compute.models.StorageProfile(
 ```
 
 Le paramètre ``storage_profile`` est maintenant valide. Pour avoir un exemple complet de la procédure à suivre pour créer une machine virtuelle dans Python (réseau y compris), consultez l’ensemble du [didacticiel sur les machines virtuelles dans Python](https://github.com/Azure-Samples/virtual-machines-python-manage).
+
+Vous pouvez également créer un ``storage_profile`` à partir de votre propre image :
+
+```python
+# If you don't know the id, do a 'get' like this to obtain it
+image = compute_client.images.get(self.group_name, 'myImageDisk')
+storage_profile = azure.mgmt.compute.models.StorageProfile(
+    image_reference = azure.mgmt.compute.models.ImageReference(
+        id = image.id
+    )
+)
+```
 
 Vous pouvez facilement attacher un disque géré déjà mis en service.
 
