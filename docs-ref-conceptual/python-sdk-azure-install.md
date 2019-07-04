@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: 6014937fb41d6074e94578ccc47c30eb7b3f63d2
-ms.sourcegitcommit: 434186988284e0a8268a9de11645912a81226d6b
+ms.openlocfilehash: 9fd11cbc7b987b970ceee85c7b11b22e3d6299ea
+ms.sourcegitcommit: 31d7df367b15ec09a5a610eb333295bba0f6b351
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66376879"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67395450"
 ---
 # <a name="installation"></a>Installation
 
@@ -77,3 +77,24 @@ git clone git://github.com/Azure/azure-sdk-for-python.git
 cd azure-sdk-for-python
 python setup.py install
 ```
+
+## <a name="install-an-older-version-with-pip"></a>Installer une version antérieure avec pip
+Vous pouvez installer une version antérieure de `azure` en spécifiant les détails de version 'azure==3.0.0'.
+```bash
+pip install azure==3.0.0 
+```
+## <a name="check-sdk-installation-details-with-pip"></a>Vérifier les détails de l’installation du SDK avec pip
+Vous pouvez vérifier l’emplacement d’installation, les détails de version du SDK `azure` et plus encore.
+```bash
+pip show azure # Show installed version, location details etc.
+pip freeze     # Output installed packages in requirements format.
+pip list       # List installed packages, including editables.
+```
+## <a name="to-uninstall-with-pip"></a>Pour désinstaller avec pip
+Vous pouvez désinstaller toutes les bibliothèques Azure en une seule ligne avec le méta-package `azure`.
+```bash
+pip uninstall azure 
+```
+> [!NOTE]
+> `pip uninstall azure` supprime le méta-package `azure` mais laisse les packages `azure-*` individuels derrière (et d’autres comme `adal` et `msrest`). Avec Python et pip, pour tous les packages qui ont des dépendances, la désinstallation du package initial ne désinstalle pas les dépendances. Pour supprimer `azure-` et ses packages associés, exécutez la commande `pip freeze | grep 'azure-' | xargs pip uninstall -y` (puis effectuez des désinstallations individuelles pour adal, msrest et msrestazure).
+
